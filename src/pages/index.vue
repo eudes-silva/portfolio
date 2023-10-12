@@ -34,8 +34,6 @@ handleIntersectionObserver(projects, "projects");
 handleIntersectionObserver(contact, "contact");
 
 function selectViewSection(value: boolean) {
-  console.log(value);
-
   isViewSectionSelected.value = value;
 }
 </script>
