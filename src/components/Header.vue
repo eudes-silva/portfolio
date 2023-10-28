@@ -11,7 +11,7 @@ const props = withDefaults(
       { id: 1, hash: "#home", name: "Home" },
       { id: 2, hash: "#about", name: "Sobre mim" },
       { id: 3, hash: "#projects", name: "Projetos" },
-      { id: 4, hash: "#contact", name: "Contato" },
+      { id: 4, hash: "#skills", name: "Habilidades" },
     ],
     logoInitials: "es",
   }
@@ -40,7 +40,7 @@ const currentPath = computed(() => route.hash);
     >
       <ul class="flex justify-end select-none">
         <li
-          class="relative whitespace-nowrap mr-8"
+          class="relative whitespace-nowrap ml-12"
           v-for="navItem in props.navItems"
           :key="navItem.id"
         >

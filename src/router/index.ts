@@ -26,7 +26,7 @@ router.beforeEach((to) => {
     home: "Home",
     about: "Sobre mim",
     projects: "Projetos",
-    contact: "Contato",
+    skills: "Habilidades",
   };
 
   const viewName = to.hash.split("#")[1];

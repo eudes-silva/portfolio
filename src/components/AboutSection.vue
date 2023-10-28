@@ -15,9 +15,9 @@ function showEmail() {
     >
       Sobre mim
     </h1>
-    <div class="md:flex flex-col lg:flex-row pt-8 sm:pt-12 h-full">
+    <div class="md:flex flex-col lg:flex-row pt-2 sm:pt-12 h-full">
       <div
-        class="basis-2/6 flex items-center justify-center lg:justify-normal scale-75 lg:scale-100"
+        class="basis-2/6 flex items-center justify-center lg:justify-normal scale-50 lg:scale-75 caret-transparent"
       >
         <img
           src="@/assets/images/my-photo-circle.png"
@@ -29,10 +29,10 @@ function showEmail() {
       <div
         class="basis-4/6 flex flex-col justify-center sm:ml-8 md:ml-12 lg:ml-0"
       >
-        <p class="text-2xl sm:text-4xl font-light">
+        <p class="text-2xl sm:text-4xl font-light caret-transparent">
           Meu nome é <span class="font-semibold">Eudes Silva</span>
         </p>
-        <h2 class="text-lg sm:text-xl my-4 sm:my-8">
+        <h2 class="text-lg sm:text-xl my-4 sm:my-8 caret-transparent">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
           quibusdam libero possimus nobis eaque illo quas dolore consequatur
           autem qui fuga doloribus inventore cumque ea quidem, dolorem numquam
@@ -41,41 +41,44 @@ function showEmail() {
         <div class="w-9/12 flex">
           <ul>
             <li class="flex flex-col justify-between">
-              <span class="text-base sm:text-xl"><strong>País:</strong></span>
+              <span class="text-sm sm:text-lg font-semibold">País:</span>
             </li>
-            <li class="my-4 sm:my-12 whitespace-nowrap">
-              <span class="text-sm sm:text-xl"><strong>Educação:</strong></span>
+            <li class="my-8 sm:my-10 whitespace-nowrap">
+              <span class="text-sm sm:text-lg font-semibold">Educação:</span>
             </li>
             <li>
-              <span class="text-sm sm:text-xl"><strong>Email:</strong></span>
+              <span class="text-sm sm:text-lg font-semibold">Email:</span>
             </li>
           </ul>
           <ul class="pl-8 sm:pl-32 flex flex-col justify-between">
             <li>
-              <span class="text-sm sm:text-xl"><strong>Brasil</strong></span>
+              <span class="text-sm sm:text-lg font-semibold">Brasil</span>
             </li>
             <li class="whitespace-nowrap">
               <span
-                class="text-sm sm:text-xl -mb-2 relative"
+                class="text-sm sm:text-lg -mb-2 relative font-semibold"
                 :class="{ '-bottom-1': !professionalEmail }"
               >
-                <strong>Engenharia da Computação</strong>
+                Engenharia da Computação
               </span>
             </li>
             <li>
               <Transition>
-                <span v-if="professionalEmail" class="text-sm sm:text-xl">
-                  <strong>{{ professionalEmail }}</strong>
+                <span
+                  v-if="professionalEmail"
+                  class="text-sm sm:text-lg font-semibold"
+                >
+                  {{ professionalEmail }}
                 </span>
               </Transition>
 
               <button
                 v-if="!professionalEmail"
-                class="bg-neutral-800 text-white rounded py-2 px-4 text-sm"
+                class="bg-neutral-800 text-white rounded py-2 px-4 text-xs sm:text-sm font-semibold"
                 type="submit"
                 @click="showEmail"
               >
-                <strong>Ver endereço de email</strong>
+                Ver endereço de email
               </button>
             </li>
           </ul>

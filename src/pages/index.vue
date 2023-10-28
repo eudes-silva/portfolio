@@ -3,7 +3,7 @@ import Header from "@/components/Header.vue";
 import HomeSection from "@/components/HomeSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import ProjectsSection from "@/components/ProjectsSection.vue";
-import ContactSection from "@/components/ContactSection.vue";
+import SkillsSection from "@/components/SkillsSection.vue";
 import router from "@/router";
 import { ref, onMounted } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
@@ -13,7 +13,7 @@ const route = useRoute();
 const home = ref(null);
 const about = ref(null);
 const projects = ref(null);
-const contact = ref(null);
+const skills = ref(null);
 const isViewSectionSelected = ref(false);
 
 onMounted(() => {
@@ -21,6 +21,7 @@ onMounted(() => {
     router.push("/#home");
   }
 });
+
 function handleIntersectionObserver(ref: any, routeName: string) {
   useIntersectionObserver(ref, ([{ isIntersecting }]) => {
     if (isIntersecting && !isViewSectionSelected.value) {
@@ -31,7 +32,7 @@ function handleIntersectionObserver(ref: any, routeName: string) {
 handleIntersectionObserver(home, "home");
 handleIntersectionObserver(about, "about");
 handleIntersectionObserver(projects, "projects");
-handleIntersectionObserver(contact, "contact");
+handleIntersectionObserver(skills, "skills");
 
 function selectViewSection(value: boolean) {
   isViewSectionSelected.value = value;
@@ -54,10 +55,10 @@ function selectViewSection(value: boolean) {
   >
     <AboutSection />
   </div>
-  <div class="h-screen bg-purple-800" id="projects" ref="projects">
+  <div class="min-h-screen bg-gray-100" id="projects" ref="projects">
     <ProjectsSection />
   </div>
-  <div class="h-screen bg-orange-400" id="contact" ref="contact">
-    <ContactSection />
+  <div class="h-screen bg-orange-400" id="skills" ref="skills">
+    <SkillsSection />
   </div>
 </template>
