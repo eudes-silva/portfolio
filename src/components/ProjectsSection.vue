@@ -5,13 +5,13 @@ const projects = ref([
   {
     id: 1,
     name: "last drink",
-    thumbnail: "/src/assets/images/lastdrink-thumb.png",
+    thumbnail: "/images/lastdrink-thumb.png",
     link: "https://last-drink.vercel.app/",
   },
   {
     id: 2,
     name: "infinity store",
-    thumbnail: "/src/assets/images/infinitystore-thumb.png",
+    thumbnail: "/images/infinitystore-thumb.png",
     link: "https://infinity-store-eudes-silva.vercel.app/",
   },
 ]);
