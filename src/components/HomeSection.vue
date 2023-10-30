@@ -21,12 +21,12 @@ const emit = defineEmits<{
       height="250"
     />
     <hr
-      class="basis-3/5 bg-neutral-800 h-0.5 w-full ml-auto mr-0 translate-y-31"
+      class="basis-3/5 bg-neutral-800 h-[1px] w-full ml-auto mr-0 translate-y-31 border-none"
     />
   </div>
   <div class="flex items-center">
     <hr
-      class="basis-2/6 bg-neutral-800 h-0.5 w-full ml-0 mr-auto translate-y-3"
+      class="basis-2/6 bg-neutral-800 h-[1px] w-full ml-0 mr-auto translate-y-3 border-none"
     />
     <h1
       class="basis-4/6 text-5xl sm:text-8xl font-black text-neutral-800 caret-transparent ml-8"

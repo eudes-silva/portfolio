@@ -58,7 +58,7 @@ function selectViewSection(value: boolean) {
   <div class="min-h-screen bg-gray-100" id="projects" ref="projects">
     <ProjectsSection />
   </div>
-  <div class="h-screen bg-orange-400" id="skills" ref="skills">
+  <div class="min-h-screen bg-gray-100" id="skills" ref="skills">
     <SkillsSection />
   </div>
 </template>

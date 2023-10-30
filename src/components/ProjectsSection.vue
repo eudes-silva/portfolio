@@ -28,7 +28,9 @@ function showDetailsBtn(id: number) {
     <section class="bg-transparent w-100">
       <h1 class="text-4xl sm:text-6xl font-black whitespace-nowrap select-none">
         Feito com dedicação.
-        <hr class="bg-neutral-800 h-1 w-1/6 ml-auto -mr-36 -translate-y-6" />
+        <hr
+          class="bg-neutral-800 h-[1.5px] w-1/6 ml-auto -mr-36 -translate-y-6 border-none"
+        />
       </h1>
       <p class="font-light mt-5 text-lg whitespace-nowrap select-none">
         Alguns dos meus últimos projetos.
@@ -39,7 +41,8 @@ function showDetailsBtn(id: number) {
     <section
       v-for="project in projects"
       :key="project.id"
-      class="h-96 bg-transparent transition-colors duration-500 ease-in-out bg-white sm:bg-transparent hover:bg-white border-t-2 hover:border-transparent cursor-pointer"
+      :class="project.id === 1 ? 'border-y-2' : 'border-b-2'"
+      class="h-96 bg-transparent transition-colors duration-500 ease-in-out bg-white sm:bg-transparent hover:bg-white hover:border-transparent cursor-pointer"
     >
       <ul
         class="flex flex-col sm:flex-row h-full"
@@ -47,7 +50,7 @@ function showDetailsBtn(id: number) {
         @mouseleave="projectId = 0"
       >
         <li class="flex items-center w-full sm:w-3/4 py-16">
-          <hr class="bg-gray-300 h-0.5 w-24 ml-0" />
+          <hr class="bg-gray-300 h-0.5 w-24 ml-0 border-none" />
           <span class="text-xl sm:text-3xl font-light mx-10 select-none">{{
             project.id < 10 ? "0" + project.id : project.id
           }}</span>
@@ -59,7 +62,7 @@ function showDetailsBtn(id: number) {
         </li>
         <li
           :class="project.thumbnail"
-          class="w-full sm:w-1/2 xl:w-1/3 h-56 sm:h-full flex-none relative block"
+          class="w-full sm:w-1/2 xl:w-1/3 h-56 sm:h-full flex-none relative"
         >
           <img
             class="brightness-50 h-full"

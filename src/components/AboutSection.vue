@@ -8,7 +8,7 @@ function showEmail() {
 </script>
 <template>
   <div class="h-24"></div>
-  <hr class="bg-neutral-800 h-0.5" />
+  <hr class="bg-neutral-800 h-[1px] border-none" />
   <div class="mx-auto px-6 sm:px-12 md:px-24 lg:px-48 container h-3/4 relative">
     <h1
       class="bg-white text-4xl sm:text-6xl absolute font-black text-neutral-800 caret-transparent -top-7 sm:-top-10 inline-block px-6 -ml-6 whitespace-nowrap"
@@ -33,10 +33,9 @@ function showEmail() {
           Meu nome é <span class="font-semibold">Eudes Silva</span>
         </p>
         <h2 class="text-lg sm:text-xl my-4 sm:my-8 caret-transparent">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          quibusdam libero possimus nobis eaque illo quas dolore consequatur
-          autem qui fuga doloribus inventore cumque ea quidem, dolorem numquam
-          iusto corporis.
+          Acredito profundamente em transformações positivas no mundo utilizando
+          a criatividade e a tecnologia. Boas experiências de usabilidade me
+          interessam.
         </h2>
         <div class="w-9/12 flex">
           <ul>
