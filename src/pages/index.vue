@@ -42,14 +42,14 @@ function selectViewSection(value: boolean) {
 <template>
   <Header @selectViewSection="selectViewSection" />
   <div
-    class="h-screen bg-gray-100 bg-main-circle bg-contain bg-no-repeat bg-center pt-64 sm:pt-32"
+    class="min-h-screen bg-gray-100 bg-main-circle bg-contain bg-no-repeat bg-center pt-64 sm:pt-32"
     id="home"
     ref="home"
   >
     <HomeSection @selectViewSection="selectViewSection" />
   </div>
   <div
-    class="h-screen"
+    class="min-h-screen"
     :class="route.fullPath === '/#about' ? 'pt-16 sm:pt-24' : 'pt-6'"
     id="about"
     ref="about"
