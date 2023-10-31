@@ -23,16 +23,15 @@ const currentPath = computed(() => route.hash);
   <div
     class="flex flex-row justify-between items-center bg-gray-100 h-24 px-4 sm:px-12 md:px-24 fixed w-full z-10"
   >
-    <h1
-      @mouseenter="$emit('selectViewSection', true)"
-      @mouseleave="$emit('selectViewSection', false)"
-      to="#home"
-      class="flex-none text-5xl uppercase border font-black border-gray-400 pb-1 px-1 rotate-90 select-none"
-    >
-      <router-link class="caret-transparent" to="#home">{{
-        logoInitials
-      }}</router-link>
-    </h1>
+    <router-link class="caret-transparent" to="#home">
+      <h1
+        @mouseenter="$emit('selectViewSection', true)"
+        @mouseleave="$emit('selectViewSection', false)"
+        class="flex-none text-5xl uppercase border font-black border-gray-400 pb-1 px-1 rotate-90 select-none"
+      >
+        {{ logoInitials }}
+      </h1>
+    </router-link>
     <nav
       @mouseenter="$emit('selectViewSection', true)"
       @mouseleave="$emit('selectViewSection', false)"

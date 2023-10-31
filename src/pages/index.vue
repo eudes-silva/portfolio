@@ -4,6 +4,7 @@ import HomeSection from "@/components/HomeSection.vue";
 import AboutSection from "@/components/AboutSection.vue";
 import ProjectsSection from "@/components/ProjectsSection.vue";
 import SkillsSection from "@/components/SkillsSection.vue";
+import Footer from "@/components/Footer.vue";
 import router from "@/router";
 import { ref, onMounted } from "vue";
 import { useIntersectionObserver } from "@vueuse/core";
@@ -61,4 +62,5 @@ function selectViewSection(value: boolean) {
   <div class="min-h-screen bg-gray-100" id="skills" ref="skills">
     <SkillsSection />
   </div>
+  <Footer @selectViewSection="selectViewSection" />
 </template>
