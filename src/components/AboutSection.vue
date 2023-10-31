@@ -15,7 +15,7 @@ function showEmail() {
     >
       Sobre mim
     </h1>
-    <div class="md:flex flex-col lg:flex-row pt-2 sm:pt-12 h-full">
+    <div class="md:flex flex-col lg:flex-row pt-2 sm:pt-32 h-full">
       <div
         class="basis-2/6 flex items-center justify-center lg:justify-normal scale-50 lg:scale-75 caret-transparent"
       >
